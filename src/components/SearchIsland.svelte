@@ -70,7 +70,7 @@
       <input 
         type="text" 
         bind:value={query}
-        placeholder="Search 190+ companies..."
+        placeholder="Search 200+ companies..."
         class="block w-full pl-20 pr-8 py-5 rounded-2xl border-2 border-transparent bg-white shadow-card text-ink placeholder-ink/30 focus:outline-none focus:border-accent/40 focus:ring-4 focus:ring-accent/10 transition-all duration-300 text-2xl font-medium tracking-tight"
       />
       
