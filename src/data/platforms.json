@@ -2770,5 +2770,131 @@
     ],
     "aiExposure": "Low",
     "isPlacementAgency": true
+  },
+  {
+    "id": "connectos",
+    "name": "ConnectOS",
+    "url": "https://connectos.co",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian-owned BPO with a strong presence in the Philippines, offering remote and hybrid dayshift roles.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "emapta",
+    "name": "EMAPTA",
+    "url": "https://emapta.com",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Specializes in building remote teams for Australian and international clients with premium dayshift roles.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "hammerjack",
+    "name": "Hammerjack",
+    "url": "https://hammerjack.com.au",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian outsourcing firm with operations in the Philippines, hiring for accounting and admin roles.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "knights-of-online-sales-koos",
+    "name": "Knights of Online Sales (KOOS)",
+    "url": "https://koos.com.au",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian agency specializing in sales and admin support, hiring Filipino remote talent for dayshift.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "microsourcing",
+    "name": "MicroSourcing",
+    "url": "https://www.microsourcing.com",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "One of the largest outsourcing providers in the PH, with many Australian accounts hiring for dayshift.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "remote-talent-australia",
+    "name": "Remote Talent Australia",
+    "url": "https://remotetalentaustralia.com",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Specializes in matching Filipino VAs with Australian clients for long-term dayshift roles with HMO.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "satellite-office",
+    "name": "Satellite Office",
+    "url": "https://www.satelliteoffice.com.au",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian-owned offshoring provider with a focus on high-quality remote talent in the Philippines.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "the-remote-group",
+    "name": "The Remote Group",
+    "url": "https://theremotegroup.com",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian-managed firm hiring Filipino remote talent for various professional roles on AU time.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
+  },
+  {
+    "id": "virtual-assistant-academy-vaa",
+    "name": "Virtual Assistant Academy (VAA)",
+    "url": "https://www.vaa.ph",
+    "category": "Australian & Dayshift VA",
+    "type": "Work",
+    "description": "Australian-linked training and placement agency for Filipino VAs, focusing on AU business standards.",
+    "tags": [
+      "Dayshift",
+      "Verified"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": true
   }
 ]
