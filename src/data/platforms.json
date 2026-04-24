@@ -2590,68 +2590,12 @@
     "isPlacementAgency": true
   },
   {
-    "id": "filipino-freelancers-with-direct-clients",
-    "name": "Filipino Freelancers with Direct Clients",
-    "url": "https://www.facebook.com/groups/filipinofreelancersdirectclients",
-    "category": "Job Boards & Resources",
-    "type": "Work",
-    "description": "Group focusing on connecting freelancers directly with international clients.",
-    "tags": [
-      "Remote",
-      "Verified"
-    ],
-    "aiExposure": "Low",
-    "isPlacementAgency": true
-  },
-  {
-    "id": "hustle-from-home-ph",
-    "name": "Hustle From Home PH",
-    "url": "https://www.facebook.com/hustlefromhomeph",
-    "category": "Job Boards & Resources",
-    "type": "Work",
-    "description": "Community sharing legit work-from-home opportunities and tips.",
-    "tags": [
-      "Remote",
-      "Verified"
-    ],
-    "aiExposure": "Low",
-    "isPlacementAgency": true
-  },
-  {
     "id": "jobrack",
     "name": "Jobrack",
     "url": "https://jobrack.eu",
     "category": "Job Boards & Resources",
     "type": "Work",
     "description": "While focusing on Eastern Europe, they have expanded to include global remote talent including Filipinos.",
-    "tags": [
-      "Remote",
-      "Verified"
-    ],
-    "aiExposure": "Low",
-    "isPlacementAgency": true
-  },
-  {
-    "id": "kagantech",
-    "name": "Kagantech",
-    "url": "https://www.facebook.com/Kagantech",
-    "category": "Job Boards & Resources",
-    "type": "Work",
-    "description": "Source for entry-level remote jobs with little to no prior experience required.",
-    "tags": [
-      "Remote",
-      "Verified"
-    ],
-    "aiExposure": "Low",
-    "isPlacementAgency": true
-  },
-  {
-    "id": "online-jobs-ph-community",
-    "name": "Online Jobs PH Community",
-    "url": "https://www.facebook.com/groups/onlinejobsph",
-    "category": "Job Boards & Resources",
-    "type": "Work",
-    "description": "Official community for the largest job board for Filipinos, sharing tips and leads.",
     "tags": [
       "Remote",
       "Verified"
@@ -2896,5 +2840,33 @@
     ],
     "aiExposure": "Low",
     "isPlacementAgency": true
+  },
+  {
+    "id": "upwork",
+    "name": "Upwork",
+    "url": "https://www.upwork.com",
+    "category": "Global VA & Outsourcing",
+    "type": "Work",
+    "description": "The world's largest freelance marketplace. High-density opportunities for Filipino freelancers across all niches.",
+    "tags": [
+      "Global",
+      "Marketplace"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": false
+  },
+  {
+    "id": "fiverr",
+    "name": "Fiverr",
+    "url": "https://www.fiverr.com",
+    "category": "Global VA & Outsourcing",
+    "type": "Work",
+    "description": "Global gig marketplace. Excellent for specialized services like design, translation, and quick VA tasks.",
+    "tags": [
+      "Global",
+      "Gigs"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": false
   }
 ]
