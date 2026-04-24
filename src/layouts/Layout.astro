@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "The highly curated directory of Australian and Dayshift remote jobs for Filipino Virtual Assistants." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Google Fonts for Premium Typography -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-parchment text-ink selection:bg-accent selection:text-white pb-32">
+		<div class="max-w-[90rem] mx-auto px-4 sm:px-8 lg:px-12 pt-16">
+			<!-- Cinematic Header -->
+			<header class="mb-24 border-b border-ink/10 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+				<div>
+					<a href="/" class="block group">
+						<h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-ink flex items-center gap-3 group-hover:text-accent transition-colors duration-200">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-accent group-hover:rotate-45 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="5"/>
+								<line x1="12" y1="1" x2="12" y2="3"/>
+								<line x1="12" y1="21" x2="12" y2="23"/>
+								<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+								<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+								<line x1="1" y1="12" x2="3" y2="12"/>
+								<line x1="21" y1="12" x2="23" y2="12"/>
+								<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+								<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+							</svg>
+							Dayshift Jobs
+						</h1>
+					</a>
+					<div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-2">
+						<p class="text-xs text-ink/50 font-bold tracking-[0.2em] uppercase">Premium Australian & Dayshift Roles</p>
+						<span class="hidden sm:block w-1 h-1 bg-ink/20 rounded-full"></span>
+						<p class="text-[10px] sm:text-[11px] text-ink/40 font-bold tracking-widest uppercase flex items-center gap-1">
+							Made with <span class="text-red-500 mx-0.5">❤️</span> by 
+							<a href="https://www.linkedin.com/in/cyrusalcala/" target="_blank" rel="noopener noreferrer" class="text-ink/60 hover:text-accent hover:underline decoration-accent/50 underline-offset-4 transition-all">
+								CY ALCALA
+							</a>
+						</p>
+					</div>
+				</div>
+				<nav class="flex gap-6 md:gap-8 text-sm font-bold tracking-widest uppercase text-ink/70">
+					<a href="/boards" class="hover:text-accent transition-colors duration-200">Find a Job</a>
+					<a href="/train" class="hover:text-accent transition-colors duration-200">Train for a Job</a>
+					<a href="/resources" class="text-accent hover:text-orange-500 transition-colors duration-200">Resources Library</a>
+				</nav>
+			</header>
+
+			<main>
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>

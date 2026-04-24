@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import platformsData from '../../data/platforms.json';
+
+// Generate paths for all unique categories
+export async function getStaticPaths() {
+  const uniqueCategories = [...new Set(platformsData.map(p => p.category))];
+  
+  return uniqueCategories.map(category => {
+    // Basic slugification: lower case, replace non-alphanumeric with hyphen
+    const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    return {
+      params: { category: slug },
+      props: { 
+        categoryName: category,
+        platforms: platformsData.filter(p => p.category === category)
+      }
+    };
+  });
+}
+
+const { category } = Astro.params;
+const { categoryName, platforms } = Astro.props;
+
+// Favicon helper
+const getFavicon = (url: string) => {
+  try {
+    const u = new URL(url);
+    return `https://www.google.com/s2/favicons?domain=${u.hostname}&sz=64`;
+  } catch {
+    return '';
+  }
+};
+---
+
+<Layout title={`Workbound - ${categoryName}`}>
+  <!-- Breadcrumb & Header Zone -->
+  <div class="mb-12">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-sm font-bold tracking-[0.15em] uppercase mb-8 w-max px-4 py-2 bg-white/50 rounded-full border border-ink/5 backdrop-blur-md">
+      <a href="/" class="text-accent/80 hover:text-accent transition-colors flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        Workbound
+      </a>
+      <span class="text-ink/30 mx-1">/</span>
+      <span class="text-ink flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+        {categoryName}
+      </span>
+    </nav>
+
+    <h2 class="text-4xl md:text-5xl text-ink font-extrabold tracking-tighter leading-tight mt-6">
+      {categoryName}.
+    </h2>
+    <p class="text-xl md:text-2xl text-ink/70 mt-4 leading-relaxed font-medium tracking-tight max-w-3xl">
+      Explore all <strong class="text-ink">{platforms.length}</strong> top-tier platforms curated specifically for this category.
+    </p>
+  </div>
+
+  <!-- Expanded Premium Card Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {platforms.map((platform: any) => (
+      <a 
+        href={platform.url} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="group relative flex flex-col justify-between bg-white rounded-3xl p-8 shadow-sm border border-transparent hover:border-accent/40 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 h-full"
+      >
+        <!-- Platform Header -->
+        <div>
+          <div class="flex items-start gap-4 mb-6">
+            <img src={getFavicon(platform.url)} alt="" class="w-12 h-12 rounded-xl shadow-sm border border-black/5 bg-parchment" loading="lazy" />
+            
+            <div class="flex flex-col">
+              <h3 class="text-2xl font-bold tracking-tight text-ink leading-tight group-hover:text-accent transition-colors duration-200">
+                {platform.name}
+              </h3>
+              {platform.aiExposure === 'Low' && (
+                <span class="inline-flex items-center w-max mt-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-green-50 text-green-700 border border-green-200/50">
+                  Human Verified
+                </span>
+              )}
+            </div>
+          </div>
+          <p class="text-[1.1rem] text-ink/60 leading-relaxed font-medium">
+            {platform.description}
+          </p>
+        </div>
+
+        <!-- Tags / Pills -->
+        <div class="mt-8 flex flex-wrap gap-2">
+          {platform.tags.map((tag: string) => (
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-[10px] font-extrabold tracking-widest uppercase bg-parchment text-ink/50 border border-ink/5">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </a>
+    ))}
+  </div>
+</Layout>

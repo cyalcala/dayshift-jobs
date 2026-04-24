@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LearningIsland from '../components/LearningIsland.svelte';
+import platformsData from '../data/platforms.json';
+
+// Filter for only training resources
+const trainingPlatforms = platformsData.filter(p => p.type === 'Training');
+---
+
+<Layout title="Workbound - Upskilling: Train for a Job">
+  <!-- Dynamic Branding Hero -->
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-8">
+      <div class="h-[2px] w-8 bg-accent/30"></div>
+      <span class="text-xs font-bold tracking-[0.3em] text-accent uppercase">Educational Directory</span>
+      <div class="h-[2px] w-24 bg-accent/10"></div>
+    </div>
+
+    <h2 class="text-5xl md:text-6xl text-ink font-extrabold tracking-tighter leading-[1.1] mb-6">
+      Upskilling:<br/>
+      <span class="text-accent">Train for a Job.</span>
+    </h2>
+    
+    <p class="text-xl md:text-2xl text-ink/70 leading-relaxed font-medium tracking-tight max-w-3xl">
+      The definitive repository of premium, free, and accredited learning resources to master the skills demanded by the global remote economy.
+    </p>
+  </div>
+
+  <!-- Search & Masonry Island -->
+  <LearningIsland client:load platforms={trainingPlatforms} />
+
+</Layout>

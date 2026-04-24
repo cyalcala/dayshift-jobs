@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchIsland from '../components/SearchIsland.svelte';
+import platformsData from '../data/platforms.json';
+
+const sortedPlatforms = platformsData;
+---
+
+<Layout title="Dayshift Jobs - Australian & Remote Roles for Filipinos">
+  <!-- Minimal Apex Title -->
+  <div class="mb-8 text-center sm:text-left">
+    <h2 class="text-3xl md:text-5xl text-ink font-extrabold tracking-tighter leading-tight">
+      The master directory of Australian & Dayshift remote work.
+    </h2>
+  </div>
+
+  <!-- Intentionally load Svelte client-side to take over fuzzy search. -->
+  <SearchIsland platforms={sortedPlatforms} client:load />
+
+  <!-- Massive SEO Basement Footer -->
+  <footer id="seo-basement" class="mt-40 border-t-8 border-ink/10 bg-white mx-[-1rem] sm:mx-[-2rem] lg:mx-[-3rem] px-8 sm:px-16 lg:px-24 pt-20 pb-32">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl text-ink font-extrabold tracking-tighter mb-8">What is Dayshift Jobs?</h2>
+      
+      <div class="space-y-6 text-lg text-ink/70 font-medium leading-relaxed">
+        <p>
+          Dayshift Jobs is the definitive meta-directory for Filipino professionals seeking borderless remote opportunities that align with Australian (AEST/AEDT) or day-time hours. We meticulously curate high-intent VA agencies, BPOs, and direct hire portals, ensuring you find work that respects your sleep schedule and family life.
+        </p>
+        
+        <h3 class="text-2xl text-ink font-bold tracking-tight mt-10 mb-4">Prioritizing Australian & Pacific Timezones</h3>
+        <p>
+          While many remote job boards are saturated with US-based night shift roles, Dayshift Jobs focuses exclusively on companies that offer flexible or fixed day-time schedules. Our taxonomy prioritizes <strong>Australian Staffing Agencies, UK-based VAs, and Global BPOs</strong> that hire specifically for the Philippine day shift.
+        </p>
+
+        <h3 class="text-2xl text-ink font-bold tracking-tight mt-10 mb-4">Navigating the Remote Work Meta-Directory</h3>
+        <p>
+          Using our high-density, masonry-style platform columns, users can instantly scan across hundreds of verified portals. Whether you are looking to become an international <strong>Customer Service Representative</strong>, train cutting-edge <strong>Generative AI Models</strong> via RLHF tasks, or find entry-level freelance writing gigs, our categorization ensures you never miss a legitimate opportunity. We verify each portal against strict heuristics to filter out local-only roles and low-intent scams.
+        </p>
+      </div>
+
+      <div class="mt-20 pt-10 border-t border-ink/10 flex flex-col md:flex-row items-center justify-between text-ink/40 text-xs font-bold tracking-[0.2em] uppercase">
+        <p>© {new Date().getFullYear()} DAYSHIFT JOBS. THE REMOTE FILIPINO.</p>
+        <div class="flex gap-8 mt-6 md:mt-0">
+          <a href="#" class="hover:text-accent transition-colors">Submit Portal</a>
+          <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+          <a href="#" class="hover:text-accent transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>
