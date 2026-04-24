@@ -1,5 +1,19 @@
 [
   {
+    "id": "upwork",
+    "name": "Upwork",
+    "url": "https://www.upwork.com",
+    "category": "Global VA & Outsourcing",
+    "type": "Work",
+    "description": "The world's largest freelance marketplace. High-density opportunities for Filipino freelancers across all niches.",
+    "tags": [
+      "Global",
+      "Marketplace"
+    ],
+    "aiExposure": "Low",
+    "isPlacementAgency": false
+  },
+  {
     "id": "fj-accountants-limited",
     "name": "FJ Accountants Limited",
     "url": "https://fjaccountants.com",
@@ -2840,20 +2854,6 @@
     ],
     "aiExposure": "Low",
     "isPlacementAgency": true
-  },
-  {
-    "id": "upwork",
-    "name": "Upwork",
-    "url": "https://www.upwork.com",
-    "category": "Global VA & Outsourcing",
-    "type": "Work",
-    "description": "The world's largest freelance marketplace. High-density opportunities for Filipino freelancers across all niches.",
-    "tags": [
-      "Global",
-      "Marketplace"
-    ],
-    "aiExposure": "Low",
-    "isPlacementAgency": false
   },
   {
     "id": "fiverr",
